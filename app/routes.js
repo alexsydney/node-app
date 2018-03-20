@@ -20,9 +20,14 @@ router.get('/', function(req, res){
 
 // route for about page
 router.get('/about', function(req, res){
-  // res.send('hello world this is about page.');
-  //res.sendFile(path.join(__dirname, '../about.html'));
-  res.render('pages/about');
+// create mockup user array
+var users = [
+
+  { name: 'Holly', email: 'kay@gmail.com', avatar: 'https://placekitten.com/400/350'},
+  { name: 'Catchy', email: 'm@gmail.com', avatar: 'http://placekitten.com/300/350'},
+  { name: 'Moonly', email: 'k@gmail.com', avatar: 'https://i.stack.imgur.com/GjO1U.jpg/300/200'},
+];
+  res.render('pages/about', { users: users });
 });
 
 // route for contact page
