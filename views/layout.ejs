@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>My node app</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/styles.css">
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-inverse">
+        <a href="/" class="navbar-brand">My Node app</a>
+        <ul class="nav navbar-nav">
+          <li><a href="/">Home</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+
+<!-- Main contain here -->
+<%- defineContent('hero') %>
+
+<main>
+  <div class="container">
+    <%- body %>
+  </div>
+</main>
+
+  <footer>
+    Learn to create Node.js app - Alex Pham &copy; 2018
+
+  </footer>
+</body>
+</html>
