@@ -23,9 +23,12 @@ var http = require('http');
 
 //// express /////
 
+// require for dependencies
 // server.js
 var express = require('express');
 var expresslayouts = require('express-ejs-layouts');
+
+var bodyParser = require('body-parser');
 
 var app = express();
 var port = 8080;
@@ -33,6 +36,9 @@ var port = 8080;
 // set view engine to ejs
 app.set('view engine', 'ejs');
 app.use(expresslayouts);
+
+// use bodyParser
+app.use(bodyParser.urlencoded());
 
 var router = require('./app/routes');
 app.use('/', router);
